@@ -247,6 +247,27 @@ Google Play Console supports store listing experiments:
 | Outdated UI | Looks abandoned | Update screenshots with each major release |
 | No hero screenshot | Weak first impression | Position 1 = your best shot |
 
+## Important
+
+AI-generated images (via inference.sh) produce **marketing mockups**, not real app screenshots. For actual screenshots of your running app, use [maestro-mobile-testing](https://github.com/JuanMarchetto/maestro-mobile-testing) or [playwright-recording](https://github.com/JuanMarchetto/playwright-recording-skill) to capture real screens, then use this skill for framing, captions, and store optimization.
+
+## Example Output
+
+```
+App Store Screenshot Set Generated:
+- hero-iphone15pro.png (1290x2796) — "Track Your Habits Effortlessly"
+- feature-calendar.png (1290x2796) — "See Your Week at a Glance"
+- social-proof.png (1290x2796) — "Join 50,000+ Users"
+- ipad-pro.png (2048x2732) — "Beautiful on Every Screen"
+- feature-graphic.png (1024x500) — Google Play feature graphic
+```
+
+## Error Handling
+
+- **Wrong dimensions**: Check platform specs table above — App Store and Play Store have different requirements
+- **Store rejection**: Common causes: transparency in JPEG (use PNG), text too small (30pt+ minimum), screenshots show non-final UI
+- **AI mockup looks generic**: Add specific details to the prompt (your app's actual color scheme, specific screen content, real feature names)
+
 ## Checklist
 
 - [ ] Correct dimensions for target platform
